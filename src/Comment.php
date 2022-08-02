@@ -1,11 +1,11 @@
 <?php
 
-namespace IslamRumon\Comments;
+namespace Saifulislam\Comments;
 
 use Illuminate\Database\Eloquent\Model;
-use IslamRumon\Comments\Events\CommentCreated;
-use IslamRumon\Comments\Events\CommentUpdated;
-use IslamRumon\Comments\Events\CommentDeleted;
+use Saifulislam\Comments\Events\CommentCreated;
+use Saifulislam\Comments\Events\CommentUpdated;
+use Saifulislam\Comments\Events\CommentDeleted;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Config;
 

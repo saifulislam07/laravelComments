@@ -1,8 +1,8 @@
 <?php
 
-namespace IslamRumon\Comments;
+namespace Saifulislam\Comments;
 
-use IslamRumon\Comments\Comment;
+use Saifulislam\Comments\Comment;
 
 class CommentPolicy
 {

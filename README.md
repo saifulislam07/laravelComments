@@ -73,7 +73,7 @@ I plan to expand this chapter with more tutorials and articles. If you write som
 From the command line:
 
 ```bash
-composer require IslamRumon/comments
+composer require Saifulislam/comments
 ```
 
 
@@ -91,7 +91,7 @@ php artisan migrate
 Add the `Commenter` trait to your User model so that you can retrieve the comments for a user:
 
 ```php
-use IslamRumon\Comments\Commenter;
+use Saifulislam\Comments\Commenter;
 
 class User extends Authenticatable
 {
@@ -105,7 +105,7 @@ class User extends Authenticatable
 Add the `Commentable` trait to the model for which you want to enable comments for:
 
 ```php
-use IslamRumon\Comments\Commentable;
+use Saifulislam\Comments\Commentable;
 
 class Product extends Model
 {
@@ -119,7 +119,7 @@ class Product extends Model
 Publish the config file (optional):
 
 ```bash
-php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="Saifulislam\Comments\ServiceProvider" --tag=config
 ```
 
 
@@ -128,7 +128,7 @@ php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --ta
 The default UI is made for Bootstrap 4, but you can change it however you want.
 
 ```bash
-php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="Saifulislam\Comments\ServiceProvider" --tag=views
 ```
 
 
@@ -137,7 +137,7 @@ php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --ta
 You can publish migration to allow you to have more control over your table
 
 ```bash
-php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --tag=migrations
+php artisan vendor:publish --provider="Saifulislam\Comments\ServiceProvider" --tag=migrations
 ```
 
 
@@ -146,7 +146,7 @@ php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --ta
 The package currently only supports English, but I am open to PRs for other languages.
 
 ```bash
-php artisan vendor:publish --provider="IslamRumon\Comments\ServiceProvider" --tag=translations
+php artisan vendor:publish --provider="Saifulislam\Comments\ServiceProvider" --tag=translations
 ```
 
 
@@ -217,9 +217,9 @@ You can configure the maximum indentation level like so:
 
 This package fires events to let you know when things happen.
 
-- `IslamRumon\Comments\Events\CommentCreated`
-- `IslamRumon\Comments\Events\CommentUpdated`
-- `IslamRumon\Comments\Events\CommentDeleted`
+- `Saifulislam\Comments\Events\CommentCreated`
+- `Saifulislam\Comments\Events\CommentUpdated`
+- `Saifulislam\Comments\Events\CommentDeleted`
 
 
 ## REST API
@@ -227,10 +227,10 @@ This package fires events to let you know when things happen.
 To change the controller or the routes, see the config.
 
 ```
-Route::post('comments', '\IslamRumon\Comments\CommentController@store')->name('comments.store');
-Route::delete('comments/{comment}', '\IslamRumon\Comments\CommentController@destroy')->name('comments.destroy');
-Route::put('comments/{comment}', '\IslamRumon\Comments\CommentController@update')->name('comments.update');
-Route::post('comments/{comment}', '\IslamRumon\Comments\CommentController@reply')->name('comments.reply');
+Route::post('comments', '\Saifulislam\Comments\CommentController@store')->name('comments.store');
+Route::delete('comments/{comment}', '\Saifulislam\Comments\CommentController@destroy')->name('comments.destroy');
+Route::put('comments/{comment}', '\Saifulislam\Comments\CommentController@update')->name('comments.update');
+Route::post('comments/{comment}', '\Saifulislam\Comments\CommentController@reply')->name('comments.reply');
 ```
 
 

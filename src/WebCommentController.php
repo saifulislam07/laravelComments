@@ -1,6 +1,6 @@
 <?php
 
-namespace IslamRumon\Comments;
+namespace Saifulislam\Comments;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;

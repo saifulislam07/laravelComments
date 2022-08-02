@@ -1,6 +1,6 @@
 <?php
 
-namespace IslamRumon\Comments;
+namespace Saifulislam\Comments;
 
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\App;
